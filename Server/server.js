@@ -10,9 +10,13 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/'); // Папка для сохранения файлов
   },
-  filename: function (req, file, cb) {
+/*   filename: function (req, file, cb) {
     cb(null, Date.now() + path.extname(file.originalname)); // Уникальное имя файла
   }
+}); */
+filename: function (req, file, cb) {
+  cb(null, file.originalname); // Использование оригинального имени файла
+}
 });
 const upload = multer({ storage });
 

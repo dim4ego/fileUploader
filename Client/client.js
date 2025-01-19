@@ -5,7 +5,7 @@ const FormData = require('form-data');
 
 // Путь к файлу для отправки
 const filePath = './example.txt'; // Укажите путь к вашему файлу
-const serverUrl = 'http://<server-ip>:3000/upload'; // Укажите IP-адрес сервера
+const serverUrl = 'http://localhost:3000/upload'; // Укажите IP-адрес сервера
 
 async function uploadFile() {
   try {
